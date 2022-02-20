@@ -5,59 +5,87 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
+    android:padding="50dp"
     android:orientation="vertical"
+    android:background="@drawable/login_background"
     tools:context=".MainActivity">
 
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:gravity="center"
+      android:layout_marginTop="20dp"
       android:orientation="horizontal">
 
     <ImageView
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="100dp"
-        android:src="@mipmap/ic_launcher"
-        />
+        android:src="@drawable/nepp_logo"/>
 
   </LinearLayout>
 
-  <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="10dp"
-      android:textSize="20dp"
-      android:text="아이디"/>
-
-  <EditText
+  <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:hint="이메일 양식"
-      android:inputType="textEmailAddress"/>
+      android:orientation="vertical">
 
-  <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="10dp"
-      android:textSize="20dp"
-      android:text="비밀번호"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:padding="10dp">
+<!--      LinearLayout 전체 영역에 border bottom 만 남기는 법을 모르겠습니다. -->
 
-  <EditText
+      <ImageView
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:src="@drawable/id_icon"/>
+
+      <EditText
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:hint="이메일"
+          android:inputType="textEmailAddress"/>
+<!--      텍스트 뒤에 숨은것 나오게 하는 법 모르겠습니다. -->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:padding="10dp">
+
+      <ImageView
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:src="@drawable/password_icon"/>
+
+      <EditText
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:hint="비밀번호"
+          android:inputType="textPassword"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <Button
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:hint="비밀번호 입력"
-      android:inputType="textPassword"/>
-
-  <CheckBox
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="자동 로그인"/>
-
-  <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="0dp"
-      android:layout_weight="1"/>
+      android:layout_height="60dp"
+      android:text="로그인"
+      android:textSize="18sp"
+      android:backgroundTint="#454545"/>
+<!--  버튼 radius 직각 조정 하는 법을 모르겠습니다. -->
 
   <LinearLayout
       android:layout_width="match_parent"
@@ -69,17 +97,125 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="회원가입"
-        />
+        android:textSize="18sp"
+        android:backgroundTint="@color/black"
+        android:alpha="0.2"/>
+    <!-- 버튼 투명도 설정 + 회원가입 텍스트 색상 화이트로 변경하는 법 모르겠습니다. -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|"
+        android:textSize="30sp"
+        android:textColor="@color/white"/>
 
     <Button
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:layout_marginStart="5dp"
-        android:text="로그인"
+        android:text="비밀번호 찾기"
+        android:textSize="18sp"
+        android:backgroundTint="@color/black"
+        android:alpha="0.2"/>
         />
 
-  </LinearLayout>
+    </LinearLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:orientation="vertical"
+          android:gravity="center">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/kakao_login_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Kakao"/>
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:orientation="vertical"
+          android:gravity="center">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/naver_login_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Naver"/>
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:orientation="vertical"
+          android:gravity="center">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/google_login_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Google"/>
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:orientation="vertical"
+          android:gravity="center">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/apple_login_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Apple"/>
+
+      </LinearLayout>
+
+    </LinearLayout>
 
   </LinearLayout>
