@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="50dp"
+    android:padding="20dp"
     android:orientation="vertical"
     android:background="@drawable/login_background"
     tools:context=".MainActivity">
@@ -30,18 +30,19 @@
       android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/emailArea"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
         android:gravity="center"
-        android:padding="10dp">
-<!--      LinearLayout 전체 영역에 border bottom 만 남기는 법을 모르겠습니다. -->
+        android:padding="5dp">
+<!--  LinearLayout 전체 영역에 border bottom(밑줄)만 남기는 법을 모르겠습니다. -->
 
       <ImageView
-          android:layout_width="30dp"
-          android:layout_height="30dp"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
           android:src="@drawable/id_icon"/>
 
       <EditText
@@ -49,23 +50,27 @@
           android:layout_height="wrap_content"
           android:layout_weight="1"
           android:hint="이메일"
+          android:layout_marginStart="20dp"
+          android:textColorHint="#ffffff"
+          android:textColor="#ffffff"
+          android:alpha="0.5"
           android:inputType="textEmailAddress"/>
-<!--      텍스트 뒤에 숨은것 나오게 하는 법 모르겠습니다. -->
 
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/passwordArea"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="20dp"
         android:gravity="center"
-        android:padding="10dp">
+        android:padding="5dp">
 
       <ImageView
-          android:layout_width="30dp"
-          android:layout_height="30dp"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
           android:src="@drawable/password_icon"/>
 
       <EditText
@@ -73,6 +78,10 @@
           android:layout_height="wrap_content"
           android:layout_weight="1"
           android:hint="비밀번호"
+          android:layout_marginStart="20dp"
+          android:textColorHint="#ffffff"
+          android:textColor="#ffffff"
+          android:alpha="0.5"
           android:inputType="textPassword"/>
 
     </LinearLayout>
@@ -85,7 +94,7 @@
       android:text="로그인"
       android:textSize="18sp"
       android:backgroundTint="#454545"/>
-<!--  버튼 radius 직각 조정 하는 법을 모르겠습니다. -->
+<!--  버튼 radius = 0 (직각) 조정 하는 법을 모르겠습니다. -->
 
   <LinearLayout
       android:layout_width="match_parent"
@@ -99,14 +108,16 @@
         android:text="회원가입"
         android:textSize="18sp"
         android:backgroundTint="@color/black"
-        android:alpha="0.2"/>
-    <!-- 버튼 투명도 설정 + 회원가입 텍스트 색상 화이트로 변경하는 법 모르겠습니다. -->
+        android:alpha="0.1"
+        android:textColor="#ffffff"/>
+    <!-- 버튼 투명도 설정해도 텍스트 색상을 투명하지않게 유지하는법 모르겠습니다. -->
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="|"
-        android:textSize="30sp"
+        android:textSize="25sp"
+        android:alpha="0.5"
         android:textColor="@color/white"/>
 
     <Button
@@ -116,7 +127,8 @@
         android:text="비밀번호 찾기"
         android:textSize="18sp"
         android:backgroundTint="@color/black"
-        android:alpha="0.2"/>
+        android:textColor="#ffffff"
+        android:alpha="0.1"/>
         />
 
     </LinearLayout>
@@ -149,6 +161,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="15sp"
+            android:textColor="#ffffff"
+            android:alpha="0.5"
             android:text="Kakao"/>
 
       </LinearLayout>
@@ -170,6 +184,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="15sp"
+            android:textColor="#ffffff"
+            android:alpha="0.5"
             android:text="Naver"/>
 
       </LinearLayout>
@@ -191,6 +207,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="15sp"
+            android:textColor="#ffffff"
+            android:alpha="0.5"
             android:text="Google"/>
 
       </LinearLayout>
@@ -212,6 +230,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="15sp"
+            android:textColor="#ffffff"
+            android:alpha="0.5"
             android:text="Apple"/>
 
       </LinearLayout>
